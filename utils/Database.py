@@ -53,7 +53,7 @@ def charger_parametres(fichier, type_de_flamme):
             
         if flamme["mixture"] == "Pure" : 
             return temperatures, pressures, equivalence_ratios
-        elif flame["mixture"] == "Bifuel" : 
+        elif flamme["mixture"] == "Bifuel" : 
             mixture = flamme["mixture"]["valeurs"]
             return temperatures, pressures, equivalence_ratios,mixture
         
@@ -67,3 +67,15 @@ def generate_test_cases(temp_range, pressure_range, second_param):
     test_cases = [(p * 101325, T, second) for p, T, second in test_cases]
     
     return test_cases
+
+
+def generate_test_cases_bifuel(temperature,pressure,eq_ratio,mixture):
+
+    test_cases = list(itertools.product(pressure, temperature, eq_ratio,mixture))
+
+    # Convertir les pressions en Pascals (Pa) car Cantera utilise les Pascals
+    test_cases = [(p * 101325, T, second) for p, T, second in test_cases]
+    
+    return test_cases
+
+

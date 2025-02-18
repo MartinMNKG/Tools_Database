@@ -16,10 +16,10 @@ if __name__ =="__main__" :
     # =====================================================================
     start_time = time.time()
     main_path = os.getcwd()
-    file_ref = "/work/kotlarcm/WORK/V2/Boxplot_Optim/Case100/detailed.yaml" # Detailed File 
-    file_red = "/work/kotlarcm/WORK/V2/Boxplot_Optim/Case100/Gen1_PyMechOpt/input/Mech_gen_1.yaml"# Reduced File 
+    file_ref = "/work/kotlarcm/WORK/Tools_Database/Tools1_Comparision_0D/Skel/input/Detailed.yaml" # Detailed File 
+    file_red = "/work/kotlarcm/WORK/Tools_Database/Tools1_Comparision_0D/Skel/input/Reduced.yaml"# Reduced File 
     
-    file_input = "/work/kotlarcm/WORK/V2/Boxplot_Optim/Case100/input_database.json" # Input Database (SF / 0D / CF )
+    file_input = "/work/kotlarcm/WORK/Tools_Database/Tools1_Comparision_0D/Skel/input/input_database.json" # Input Database (SF / 0D / CF )
     main_path = os.getcwd()
     
     info = "Comparision" #Or Classification 
@@ -47,7 +47,7 @@ if __name__ =="__main__" :
     lenght = 100 
     
     #For 0D reactor : 
-    dt = 1e-5
+    dt = 1e-6
     end_time = 0.3
     mode ="equi"
     
